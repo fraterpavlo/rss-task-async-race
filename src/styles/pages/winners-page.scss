@@ -1,0 +1,217 @@
+
+.winners {
+
+		&__container {}
+
+		&__table {}
+
+		&__table-header-container {}
+}
+
+
+.winners-table {
+  width: 100%;
+  max-width: 800px;
+  @include flex();
+  flex-direction: column;
+  row-gap: 5px;
+
+		&__head-wrap {
+      
+    }
+
+		&__body-wrap {}
+}
+
+.table-head {
+
+		&__information-wrap {
+      font-family: $fontfamily-article;
+      font-size: 30px;
+    }
+
+		&__total-indicator-wrap {}
+
+		&__total-indicator-label {}
+
+		&__total-indicator-value {}
+
+		&__page-indicator-wrap {}
+
+		&__page-indicator-label {}
+
+		&__navigation-wrap {
+      @include flex();
+      column-gap: 30px;
+    }
+
+		&__navigation {
+
+			&_prev {}
+
+			&_next {}
+		}
+
+		&__table-hat-wrap {}
+}
+
+.table-hat {
+  margin-top: 20px;
+  @include flex();
+  align-items: center;
+  column-gap: 10px;
+  font-size: 25px;
+
+    &__id,
+    &__car,
+    &__name,
+    &__wins,
+    &__best-time {
+      @include flex();
+      justify-content: center;
+      align-items: center;
+    }
+
+		&__id,
+    &__wins,
+    &__best-time {
+      color: $bcg-color3;
+      cursor: pointer;
+    }
+    
+    &__id {
+      flex-basis: 10%;
+    }
+
+		&__car {
+      flex-basis: 20%;
+    }
+
+		&__name {
+      flex-basis: 30%;
+    }
+
+		&__wins {
+      flex-basis: 20%;
+    }
+
+		&__best-time {
+      flex-basis: 20%;
+    }
+}
+
+.winners .table-body {
+  font-size: 20px;
+  @include flex();
+  flex-direction: column;
+
+		&__row {
+
+      &:first-child {
+        border-top: 2px solid $bcg-color3;
+      }
+  
+      &:last-child {
+        border-bottom: 2px solid $bcg-color3;
+      }
+    }
+}
+
+.winner {
+  min-height: 50px;
+  @include flex();
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid $bcg-color3;
+
+    &__id,
+    &__car-image-wrap,
+    &__name,
+    &__wins,
+    &__best-time {
+      @include flex();
+      justify-content: center;
+      align-items: center;
+    }
+    
+    &__id {
+      flex-basis: 10%;
+    }
+
+    &__car-image-wrap {
+      flex-basis: 20%;
+    }
+
+    &__name {
+      flex-basis: 30%;
+    }
+
+    &__wins {
+      flex-basis: 20%;
+    }
+
+    &__best-time {
+      flex-basis: 20%;
+    }
+
+		&__id {}
+
+		&__car-image-wrap {
+      width: 80px;
+      height: 40px;
+    }
+
+    &__car-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+		&__name {}
+
+		&__wins {}
+
+		&__best-time {}
+}
+.table-row {
+}
+
+
+
+.table-header,
+.table-row {
+  margin: 0;
+
+  @include flex();
+
+  > * {
+    width: 140px;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5px;
+
+
+    @include flex();
+  }
+}
+
+.table-header {
+  font-size: 22px;
+}
+
+.table-header__number,
+.table-header__wins,
+.table-header__best-time {
+  font-size: 22px;
+  color: $bcg-color3;
+  cursor: pointer;
+}
+
+.table-row__image {
+  width: 100px;
+  height: 50px;
+  background-color: #fafafa;
+  -webkit-mask: url(../assets/svg/Ferrarri.svg) center / contain no-repeat;
+  -moz-mask: url(../assets/svg/Ferrarri.svg) center / contain no-repeat;
+  mask: url(../assets/svg/Ferrarri.svg) center / contain no-repeat;
+  transition: 0.3s linear;
+}

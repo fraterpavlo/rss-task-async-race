@@ -1,0 +1,50 @@
+.footer {
+  min-height: 70px;
+
+  &__container {
+    @include flex();
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.personal-data {
+  width: 100%;
+  @include flex();
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  color: $font-color-main;
+  font-family: $fontfamily-article;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  line-height: 16px;
+  transition: all 0.3s ease;
+
+  &__school-icon {
+    width: 100px;
+    height: 40px;
+    background-color: $bcg-color-white;
+    -webkit-mask: url(../assets/svg/rs_school_js.svg) center / contain no-repeat;
+    -moz-mask: url(../assets/svg/rs_school_js.svg) center / contain no-repeat;
+    mask: url(../assets/svg/rs_school_js.svg) center / contain no-repeat;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background-color: $bcg-color3;
+    }
+  }
+
+  &__github,
+  &__year {
+    transition: all 0.3s linear;
+
+    &:hover {
+      color: $bcg-color3;
+    }
+  }
+
+
+}
+
